@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#FizzBuzz between 1 to 100
+counter=1
+
+while [ $counter -le 100 ]
+do
+    if ((counter % 3 == 0 && counter % 5 == 0))
+    then
+        echo "FizzBuzz"
+    elif ((counter % 3 == 0))
+    then
+        echo "Fizz"
+    elif ((counter % 5 == 0))
+    then
+        echo "Buzz"
+    else
+        echo "$counter"
+    fi
+    ((counter+=1))
+done
