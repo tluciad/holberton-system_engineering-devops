@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#create file, SIGTERM, SIGINT, SIGQUIT
+trap 'sudo rm -rf /var/run/myscript.pid; exit' SIGQUIT
+trap 'echo "I hate the kill command"; sudo rm -rf /var/run/myscript.pid; exit' SIGTERM
+trap 'echo "Y U no love me?!"' SIGINT
+touch /var/run/myscript.pid
+while :
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
