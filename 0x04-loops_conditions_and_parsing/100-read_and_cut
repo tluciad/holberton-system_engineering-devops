@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Your script display: username, user id, Home directory path for the user
+cut -d: -f 1,3,6 < /etc/passwd
+while read -r file; 
+do
+    echo "$file"  
+done 
