@@ -1,4 +1,6 @@
 # Command line for the win
+![image](https://user-images.githubusercontent.com/98775997/179368665-ee3db581-3e25-4684-92e0-975a8a92bef7.png)
+
 
 ## Background Context
 CMD CHALLENGE is a pretty cool game challenging you on Bash skills. Everything is done via the command line and the questions are becoming increasingly complicated. It’s a good training to improve your command line skills!
