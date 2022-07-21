@@ -10,7 +10,7 @@ For this project, we expect you to look at these concepts:
 - Load balancer
 - Server
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lQNEW76KdYg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+[![Alt text](https://img.youtube.com/vi/lQNEW76KdYg/0.jpg)](https://www.youtube.com/watch?v=lQNEW76KdYg)
 
 ## Resources
 Read or watch:
