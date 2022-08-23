@@ -2,12 +2,10 @@
 file_line { 'PasswordAuthentication':
     ensure  => 'present',
     path    => '/etc/ssh/ssh_config',
-    line    => 'PasswordAuthentication no'
-    replace => true
+    line    => 'PasswordAuthentication no'    
 }
 file_line {'Configuration ssh':
     ensure  => 'present',
     path    => '/etc/ssh/ssh_config',
-    line    => 'IdentityFile ~/.ssh/school'
-    replace => true
+    line    => 'IdentityFile ~/.ssh/school'    
 }
