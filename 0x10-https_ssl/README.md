@@ -9,6 +9,8 @@ For this project, we expect you to look at these concepts:
 
 - DNS
 - Web stack debugging
+![image](https://user-images.githubusercontent.com/98775997/186775529-34ebdcae-84fc-47ee-a576-ab3ca4fc8b0c.png)
+
 
 
 ### Background Context
