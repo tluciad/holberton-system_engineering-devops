@@ -6,6 +6,6 @@ sudo apt-get upgrade -y
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
 sudo echo "Hello World" | sudo tee /var/www/html/index.nginx-debian.html
-varlocation1="server_name _;\n\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}"
-sudo sed -i "0,/server_name _;/{s|server_name _;|$varlocation1|}" /etc/nginx/sites-available/default
-sudo service nginx start
+VarLocation="server_name _;\n\n\tlocation /redirect_me {return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4}"
+sudo sed -i "0, /server_name _; /{server_name _;|$VarLocation|} /etc/nginx/sites-available/default"
+sudo service nginx restart
