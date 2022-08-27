@@ -1,0 +1,40 @@
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                   
+tcp6       0      0 :::80                   :::*                    LISTEN      -                   
+tcp6       0      0 :::22                   :::*                    LISTEN      -                   
+udp        0      0 127.0.0.53:53           0.0.0.0:*                           -                   
+udp        0      0 10.250.23.195:68        0.0.0.0:*                           -                   
+raw6       0      0 :::58                   :::*                    7           -                   
+Active UNIX domain sockets (only servers)
+Proto RefCnt Flags       Type       State         I-Node   PID/Program name     Path
+unix  2      [ ACC ]     STREAM     LISTENING     20379    -                    /var/snap/lxd/common/lxd/unix.socket
+unix  2      [ ACC ]     STREAM     LISTENING     66361    5162/systemd         /run/user/1000/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     66367    5162/systemd         /run/user/1000/bus
+unix  2      [ ACC ]     STREAM     LISTENING     66368    5162/systemd         /run/user/1000/gnupg/S.dirmngr
+unix  2      [ ACC ]     STREAM     LISTENING     14481    -                    @/org/kernel/linux/storage/multipathd
+unix  2      [ ACC ]     STREAM     LISTENING     66369    5162/systemd         /run/user/1000/gnupg/S.gpg-agent.browser
+unix  2      [ ACC ]     STREAM     LISTENING     66370    5162/systemd         /run/user/1000/gnupg/S.gpg-agent.extra
+unix  2      [ ACC ]     STREAM     LISTENING     66371    5162/systemd         /run/user/1000/gnupg/S.gpg-agent.ssh
+unix  2      [ ACC ]     STREAM     LISTENING     66372    5162/systemd         /run/user/1000/gnupg/S.gpg-agent
+unix  2      [ ACC ]     STREAM     LISTENING     66373    5162/systemd         /run/user/1000/pk-debconf-socket
+unix  2      [ ACC ]     STREAM     LISTENING     66374    5162/systemd         /run/user/1000/snapd-session-agent.socket
+unix  2      [ ACC ]     STREAM     LISTENING     24707    -                    /var/lib/amazon/ssm/ipc/health
+unix  2      [ ACC ]     STREAM     LISTENING     14468    -                    /run/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     14470    -                    /run/systemd/userdb/io.systemd.DynamicUser
+unix  2      [ ACC ]     STREAM     LISTENING     14479    -                    /run/lvm/lvmpolld.socket
+unix  2      [ ACC ]     STREAM     LISTENING     14484    -                    /run/systemd/fsck.progress
+unix  2      [ ACC ]     STREAM     LISTENING     14494    -                    /run/systemd/journal/stdout
+unix  2      [ ACC ]     SEQPACKET  LISTENING     14499    -                    /run/udev/control
+unix  2      [ ACC ]     STREAM     LISTENING     14896    -                    /run/systemd/journal/io.systemd.journal
+unix  2      [ ACC ]     STREAM     LISTENING     20347    -                    /run/acpid.socket
+unix  2      [ ACC ]     STREAM     LISTENING     20361    -                    /run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     20381    -                    /run/snapd.socket
+unix  2      [ ACC ]     STREAM     LISTENING     20383    -                    /run/snapd-snap.socket
+unix  2      [ ACC ]     STREAM     LISTENING     20386    -                    /run/uuidd/request
+unix  2      [ ACC ]     STREAM     LISTENING     24708    -                    /var/lib/amazon/ssm/ipc/termination
+unix  2      [ ACC ]     STREAM     LISTENING     20378    -                    @ISCSIADM_ABSTRACT_NAMESPACE
