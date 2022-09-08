@@ -6,8 +6,9 @@ sudo apt-get -y install haproxy
 append_lines=" 
 frontend holberton
     bind *:80
-    mode http
+    mode https
     default_backend web_servers
+
 backend web_servers
     mode http
     balance roundrobin
