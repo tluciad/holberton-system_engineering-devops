@@ -7,22 +7,16 @@ import csv
 if __name__ == "__main__":
 
     userId = (argv[1])
-    response_user = requests.get(
-        "https://jsonplaceholder.typicode.com/users/{}".format(userId)).json()
-    response_todos = requests.get(
-        "https://jsonplaceholder.typicode.com/todos".format(userId)).json()
+    respUser = requests.get(
+        "https://jsonplaceholder.typicode.com/users/{}".format(userId))
+    respTodos = requests.get(
+        "https://jsonplaceholder.typicode.com/todos".format(userId))
 
-    USERNAME = response_user['name']
+    name = respUser.json().get('username')
 
-    with open('USER_ID.csv', 'w', newline='') as csvfile:
-        for items in response_todos:
-            Uid = items['userId']
-            if (Uid == int(userId)):
-                TASK_COMPLETED_STATUS = items['completed']
-                TASK_TITLE = items['title']
-                spamwriter = csv.writer(csvfile, delimiter=',',
-                                        quotechar='|',
-                                        quoting=csv.QUOTE_MINIMAL)
-                spamwriter.writerow(
-                    [f'"{userId}"', f'"{USERNAME}"',
-                        f'"{TASK_COMPLETED_STATUS}"', f'"{TASK_TITLE}"'])
+    with open('{}.csv'.format(userId), 'w', newline='') as csvfile:
+        Cwrite = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+        for item in respTodos.json():
+            if item.get('userId') == int(userId):
+                Cwrite.writerow(
+                    [userId, name, item.get('completed'), item.get('title')])
