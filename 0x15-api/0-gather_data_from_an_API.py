@@ -4,10 +4,11 @@ for a given employee ID, returns information about his/her
 TODO list progress."""
 import requests
 from sys import argv
+
+
 if __name__ == "__main__":
     """module to returns information about his/her TODO list"""
     userId = (argv[1])
-
     response_user = requests.get(
         "https://jsonplaceholder.typicode.com/users/{}".format(userId)).json()
     response_todos = requests.get(
