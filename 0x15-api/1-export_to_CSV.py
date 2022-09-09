@@ -1,27 +1,28 @@
 #!/usr/bin/python3
 """Python script to export data in the CSV format"""
 import requests
-import sys
+from sys import argv
 import csv
 
 if __name__ == "__main__":
 
-    USER_ID = (sys.argv[1])
-    users_url = f"https://jsonplaceholder.typicode.com/users/{USER_ID}"
-    todos_url = f"https://jsonplaceholder.typicode.com/todos"
-
-    response_user = requests.get(users_url).json()
-    response_todos = requests.get(todos_url).json()
+    userId = (argv[1])
+    response_user = requests.get(
+        "https://jsonplaceholder.typicode.com/users/{}".format(userId)).json()
+    response_todos = requests.get(
+        "https://jsonplaceholder.typicode.com/todos".format(userId)).json()
 
     USERNAME = response_user['name']
 
     with open('USER_ID.csv', 'w', newline='') as csvfile:
         for items in response_todos:
             Uid = items['userId']
-            if (Uid == int(USER_ID)):
+            if (Uid == int(userId)):
                 TASK_COMPLETED_STATUS = items['completed']
                 TASK_TITLE = items['title']
-                spamwriter = csv.writer(
-                    csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+                spamwriter = csv.writer(csvfile, delimiter=',',
+                                        quotechar='|',
+                                        quoting=csv.QUOTE_MINIMAL)
                 spamwriter.writerow(
-                    [f'"{USER_ID}"', f'"{USERNAME}"', f'"{TASK_COMPLETED_STATUS}"', f'"{TASK_TITLE}"'])
+                    [f'"{userId}"', f'"{USERNAME}"',
+                        f'"{TASK_COMPLETED_STATUS}"', f'"{TASK_TITLE}"'])
