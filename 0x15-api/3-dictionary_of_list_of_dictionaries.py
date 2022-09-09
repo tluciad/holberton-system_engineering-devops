@@ -20,7 +20,6 @@ if __name__ == "__main__":
                                  "task": item.get('title'),
                                  "completed": item.get('completed')}
                 tasks.append(tskDictionary)
-                print(tasks)
         NewDictionary[user.get('id')] = tasks
         with open("todo_all_employees.json", 'w') as Jfile:
             json.dump(NewDictionary, Jfile)
