@@ -7,7 +7,6 @@ import sys
 
 if __name__ == "__main__":
     """module to returns information about his/her TODO list"""
-
     employee = (sys.argv[1])
     users_url = f"https://jsonplaceholder.typicode.com/users/{employee}"
     todos_url = f"https://jsonplaceholder.typicode.com/todos"
