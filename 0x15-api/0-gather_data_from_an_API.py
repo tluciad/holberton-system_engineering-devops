@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Python script that, using this REST API,
-for a given employee ID, returns information about his/her 
+for a given employee ID, returns information about his/her
 TODO list progress."""
 import requests
 import sys
@@ -21,13 +21,13 @@ if __name__ == "__main__":
     for items in response_todos:
         U_id = items['userId']
         if (U_id == int(employee)):
-            if (items['completed'] == True):
+            TOTAL_NUMBER_OF_TASKS += 1
+            if (items['completed'] is True):
                 Title.append(items['title'])
                 NUMBER_OF_DONE_TASKS += 1
-            if (items['completed'] is True or items['completed'] is False):
-                TOTAL_NUMBER_OF_TASKS += 1
 
     print(
-        f"Employee {EMPLOYEE_NAME} is done with tasks({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}):")
+        f"Employee {EMPLOYEE_NAME} is done with tasks\
+            ({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}):")
     for title in Title:
         print(f"\t{title}")
